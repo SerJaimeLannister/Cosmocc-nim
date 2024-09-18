@@ -27,8 +27,26 @@ On Windows (I don't use windows but I searched on stackoverflow and it seems tha
 
 5. Then create a nim file and nim.cfg (install nim if you haven't)
 
-6.  then copy this into your nim.cfg / change your operating system to the one you are using I suppose
-```--os:linux
+6.  Update: though this works , After some help by Jart , It seems that if you really want threads then you can do the following (This github issue helped me fixing it https://github.com/nim-lang/Nim/issues/22392)
+
+then copy one of these into your nim.cfg 
+also change the operating system tag in the config to the one you are using I suppose
+
+
+If you want threads then paste the following (Threads solution)
+
+```
+--os:linux
+--gc:orc # Not required, but ARC/ORC would obviously work much better for a target like Cosmopolitan
+--threads:on # Nim 2 enables threads by default, disable them since I don't think they're needed?
+--cc:env
+-d:useMalloc
+```
+
+Non threads solution
+
+```
+--os:linux
 --gc:orc # Not required, but ARC/ORC would obviously work much better for a target like Cosmopolitan
 --threads:off # Nim 2 enables threads by default, disable them since I don't think they're needed?
 --cc:env
