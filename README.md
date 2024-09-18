@@ -1,9 +1,5 @@
 # this is a project to compile nim code to [Actually Portable Executable](https://justine.lol/ape.html)  with the help of cosmocc & [cosmopolitan](https://github.com/jart/cosmopolitan)
 
-## this was created with the help of https://github.com/jart/ & https://github.com/ahgamut/
-### this couldn't have been made without their help
-### please go sponsor them if possible
-
 the intention of creating this project is that the cosmonim repository https://github.com/rfesi/cosmonim uses cosmopolitan-amalgamation which in the newer versions of cosmopolitan don't exist
 Instead this uses cosmocc.
 
@@ -39,3 +35,10 @@ On Windows (I don't use windows but I searched on stackoverflow and it seems tha
 ```
 
 7. run nim c file_name.nim which should create a binary in the ape format.
+
+
+this was created with the help of https://github.com/jart/ & https://github.com/ahgamut/
+
+this couldn't have been made without their help
+ 
+please go sponsor them if possible
